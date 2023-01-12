@@ -1,0 +1,21 @@
+services:
+  _defaults:
+    autowire: true
+    autoconfigure: true
+    public: false
+
+  DigitalMarketingFramework\Typo3\Collector\Pardot\:
+    resource: '../Classes/*'
+    exclude: '../Classes/Domain/Model/*'
+
+  DigitalMarketingFramework\Typo3\Collector\Pardot\Registry\EventListener\CollectorRegistryPluginUpdateEventListener:
+    tags:
+      - name: event.listener
+        identifier: 'digital-marketing-framework/collector-pardot/registry-update/collector/plugin'
+        event: DigitalMarketingFramework\Typo3\Collector\Core\Registry\Event\CollectorRegistryPluginUpdateEvent
+
+  DigitalMarketingFramework\Typo3\Collector\Pardot\Registry\EventListener\CoreRegistryPluginUpdateEventListener:
+    tags:
+      - name: event.listener
+        identifier: 'digital-marketing-framework/collector-pardot/registry-update/core/plugin'
+        event: DigitalMarketingFramework\Typo3\Core\Registry\Event\CoreRegistryPluginUpdateEvent
