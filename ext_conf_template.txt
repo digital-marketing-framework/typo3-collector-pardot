@@ -1,0 +1,27 @@
+api {
+    # cat=Pardot API; type=string; label=Environment (production,sandbox,develop_org)
+    environment = production
+
+    # cat=Pardot API; type=string; label=Version
+    version = 3
+
+    credentials {
+        # cat=Pardot API; type=string; label=User Name
+        username =
+
+        # cat=Pardot API; type=string; label=User Password
+        password =
+
+        # cat=Pardot API; type=string; label=User Security Token (needed if IP is not whitelisted)
+        securityToken =
+
+        # cat=Pardot API; type=string; label=Client ID
+        clientId =
+
+        # cat=Pardot API; type=string; label=Client Secret
+        clientSecret =
+
+        # cat=Pardot API; type=string; label=Business Unit ID
+        businessUnitId =
+    }
+}
